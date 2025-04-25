@@ -1,7 +1,7 @@
 # Lista de compras simples
 lista = []
 def cabecalho_inicial():
-	print('\n==========>>> Bem vindo ao Lista de compras simples! <<<========== ')
+	print('\n\033[1;31;44m=============>>> Lista de compras simples! <<<=============\033[0m ')
 	print("-" * 60)
 	print('\nA. Adicionar produto')
 	print('B. Remover produto')
@@ -23,7 +23,7 @@ def unidade_medida ():
 		print('G. Centímetro')
 		opcao = input('\n(?) - Entre com a letra referente á unidade de medida: ').lower()
 		if opcao not in	['a', 'b', 'c', 'd', 'e', 'f', 'g']:
-			print('\n (!) - Opção inexistente, tente novamente.')
+			print('\n\033[1;31;40m(!) - Opção inexistente, tente novamente.\033[0m')
 			continue
 		if opcao == 'a':
 			unidade = 'Quilos'
@@ -59,7 +59,7 @@ def pesquisar_por_nome(lista):
                 f'{item["Descrição"]:<20}'
             )
     else:
-        print("\n(!) - Nenhum produto encontrado com esse nome.")
+        print("\n\033[1;31;40m(!) - Nenhum produto encontrado com esse nome.\033[0m")
 
 			
 		
@@ -68,18 +68,18 @@ while True:
 	cabecalho_inicial()
 	opcao = input('\n(?) - Digite a opção desejada: ').lower()
 	if opcao not in ['a', 'b', 'c', 'd']:
-		print('\n (!) - Opção inválida, tente novamente')
+		print('\n\033[1;31;40m(!) - Opção inválida, tente novamente\033[0m')
 		continue
 	if opcao == 'd':
-		print(f'\n =====> Grato por usar a lista de compras simples <<===== ')
+		print(f'\n\033[1;33;40m=====> Grato por usar a lista de compras simples <<=====\033[0m ')
 		break
 		
 	if opcao == 'a':
 		try:
-			print('\n =====>> Adicionar Produto <<===== ')
-			nome = input('(?) - Entre com o nome do produto: ')
+			print('\n\033[1;31;44m =============>> Adicionar Produto\033[0m ')
+			nome = input('\n(?) - Entre com o nome do produto: ')
 			if nome.isalpha() == False:
-				print("\n(!) - Digite apenas letras, sem números, espaços ou símbolos.")
+				print("\n\033[1;31;40m(!) - Digite apenas letras, sem números, espaços ou símbolos.\033[0m")
 				continue
 					
 			unidade = unidade_medida()
@@ -91,7 +91,7 @@ while True:
 			"Unidade" : unidade,
 			"Descrição" : desc
 			})
-			print('\n ===>> Item computado com sucesso	<<=== ')
+			print('\n\033[1;36;42m============================>> Item computado com sucesso\033[0m ')
 			cabecalho_lista()
 			for i, item in enumerate(lista):
 				print(
@@ -102,17 +102,17 @@ while True:
 					f'{item['Descrição']:<20}'
 				)
 		except ValueError:
-			print('\n (!) -  Valor deve ser númerico') 		
+			print('\n\033[1;31;40m(!) -  Valor deve ser númerico\033[0m') 		
 			continue
 	if opcao == 'b':
 		if len(lista) == 0:
-			print('\n (!) - Não há intens para serem removidos')
+			print('\n\033[1;31;40m(!) - Não há intens para serem removidos\033[0m')
 			continue
 		try:
 			apaga = int(input('(?) - Digite o item que deseja apagar: '))
 			del lista[apaga]
 			print('===' * 20)
-			print('\n===>> Lista alterada <<===')
+			print('\n\033[1;33;40m===>> Lista alterada <<===\033[0m')
 			cabecalho_lista()
 			for i, item in enumerate(lista):
 				print(
@@ -123,13 +123,13 @@ while True:
 					f'{item['Descrição']:<20}'
 				)
 		except IndexError:
-			print('\n (!) - Item não consta na lista')
+			print('\n\033[1;31;40m(!) - Item não consta na lista\033[0m')
 			continue
 	# Pesquisar produto
 	if opcao == 'c':
 		contagem = len(lista)
 		if contagem == 0:
-			print('\n (!) - A lista não possuí itens')
+			print('\n\033[1;31;40m(!) - A lista não possuí itens.\033[0m')
 			continue
 		if contagem >= 1:
 			pesquisar_por_nome(lista)
