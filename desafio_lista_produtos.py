@@ -61,8 +61,7 @@ def pesquisar_por_nome(lista):
     else:
         print("\n\033[1;31;40m(!) - Nenhum produto encontrado com esse nome.\033[0m")
 
-			
-		
+	
 		
 while True:
 	cabecalho_inicial()
@@ -134,3 +133,4 @@ while True:
 		if contagem >= 1:
 			pesquisar_por_nome(lista)
 			
+# aplicação desenvolvida por maprevidelli - em construção - Abril 30
