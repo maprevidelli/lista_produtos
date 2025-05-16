@@ -21,6 +21,7 @@ def unidade_medida ():
 		print('E. Unidade')
 		print('F. Metro')
 		print('G. Centímetro')
+		print(f'\n\033[1;36;42m{nome}\033[0m')
 		opcao = input('\n(?) - Entre com a letra referente á unidade de medida: ').lower()
 		if opcao not in	['a', 'b', 'c', 'd', 'e', 'f', 'g']:
 			print('\n\033[1;31;40m(!) - Opção inexistente, tente novamente.\033[0m')
@@ -76,13 +77,15 @@ while True:
 	if opcao == 'a':
 		try:
 			print('\n\033[1;31;44m =============>> Adicionar Produto\033[0m ')
-			nome = input('\n(?) - Entre com o nome do produto: ')
+			nome = input('\n(?) - Entre com o nome do produto \033[1;31;44m(apenas uma palavra)\033[0m: ')
 			if nome.isalpha() == False:
 				print("\n\033[1;31;40m(!) - Digite apenas letras, sem números, espaços ou símbolos.\033[0m")
 				continue
 					
 			unidade = unidade_medida()
+			print(f'\n\033[1;36;42m{nome} - {unidade}\033[0m')
 			qtd = int(input('(?) - Entre com a quantidade deste produto: '))
+			print(f'\n\033[1;36;42m{nome} - {unidade} - {qtd}\033[0m')
 			desc = input('(?) - Entre com uma breve descrição deste produto: ')
 			lista.append({
 			"Nome" : nome,
