@@ -1,0 +1,38 @@
+# Salvamento das informações na lista
+
+Local do arquivo:
+
+Agora o arquivo será salvo na pasta home do usuário (Path.home())
+/home/marco
+-rw-rw-r-- 1 marco marco  427 mai 16 20:48  lista_compras.json
+
+
+Você pode ver o caminho exato quando salvar (mensagem em verde)
+
+Tratamento de erros:
+
+Mensagens mais claras se houver erro ao salvar/carregar
+
+Codificação UTF-8:
+
+Melhor suporte para acentos e caracteres especiais
+
+Como testar:
+Execute o script e adicione alguns itens
+
+Verifique se aparece a mensagem "Arquivo salvo em: [caminho]"
+
+Feche o programa e execute novamente - os itens devem aparecer
+
+Verifique manualmente o arquivo no local indicado
+
+Se ainda não funcionar:
+Verifique se aparece alguma mensagem de erro
+
+Tente executar o Python como administrador (especialmente no Windows)
+
+Verifique se o arquivo está sendo criado no local indicado
+
+Este código deve resolver o problema de persistência dos dados quando executado pelo Python. O arquivo JSON será criado na pasta home do seu usuário (no Windows geralmente é C:\Users\SeuUsuario\, no Linux/Mac /home/SeuUsuario/).
+
+

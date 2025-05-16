@@ -1,5 +1,31 @@
 # Lista de compras simples
-lista = []
+import json
+import os
+from pathlib import Path
+
+# Define o caminho absoluto para o arquivo de dados
+ARQUIVO_DADOS = Path.home() / 'lista_compras.json'
+
+def carregar_lista():
+    try:
+        if ARQUIVO_DADOS.exists():
+            with open(ARQUIVO_DADOS, 'r', encoding='utf-8') as f:
+                return json.load(f)
+    except Exception as e:
+        print(f"\n\033[1;31;40m(!) - Erro ao carregar arquivo: {e}\033[0m")
+    return []
+
+def salvar_lista(lista):
+    try:
+        with open(ARQUIVO_DADOS, 'w', encoding='utf-8') as f:
+            json.dump(lista, f, indent=4, ensure_ascii=False)
+        print(f"\n\033[1;32;40mArquivo salvo em: {ARQUIVO_DADOS}\033[0m")
+    except Exception as e:
+        print(f"\n\033[1;31;40m(!) - Erro ao salvar arquivo: {e}\033[0m")
+
+# Restante docódigo permanece igual...
+lista = carregar_lista()
+#lista = []
 def cabecalho_inicial():
 	print('\n\033[1;31;44m=============>>> Lista de compras simples! <<<=============\033[0m ')
 	print("-" * 60)
@@ -93,6 +119,7 @@ while True:
 			"Unidade" : unidade,
 			"Descrição" : desc
 			})
+			salvar_lista(lista)  # Adiciona esta linha
 			print('\n\033[1;36;42m============================>> Item computado com sucesso\033[0m ')
 			cabecalho_lista()
 			for i, item in enumerate(lista):
@@ -113,6 +140,7 @@ while True:
 		try:
 			apaga = int(input('(?) - Digite o item que deseja apagar: '))
 			del lista[apaga]
+			salvar_lista(lista)  # Adiciona esta linha
 			print('===' * 20)
 			print('\n\033[1;33;40m===>> Lista alterada <<===\033[0m')
 			cabecalho_lista()
