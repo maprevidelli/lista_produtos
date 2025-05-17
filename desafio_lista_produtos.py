@@ -35,8 +35,8 @@ def cabecalho_inicial():
 	print('D. Sair do programa')
 
 def cabecalho_lista ():
-	print(f"\n{'Indice':<10} | {'NOME':<10} | {'QUANTIDADE':>10} | {'UNIDADE':<10} | {'DESCRIÇÃO':<20}")
-	print("-" * 60)
+	print(f"\n{'Indice':<7} | {'NOME':<15} | {'QUANTIDADE':>10} | {'UNIDADE':<10} | {'DESCRIÇÃO':<20}")
+	print("-" * 100)
 	
 def unidade_medida ():
 	while True:
@@ -79,8 +79,8 @@ def pesquisar_por_nome(lista):
         print("-" * 60)
         for i, item in encontrados:
             print(
-                f'{i:<3} | '
-                f'{item["Nome"]:<10} | '
+                f'{i:<7} | '
+                f'{item["Nome"]:<15} | '
                 f'{item["Quantidade"]:>10} | '
                 f'{item["Unidade"]:<10} | '
                 f'{item["Descrição"]:<20}'
@@ -125,8 +125,8 @@ while True:
 			cabecalho_lista()
 			for i, item in enumerate(lista):
 				print(
-					f'{i:<10} | '
-					f'{item['Nome']:<10} | '
+					f'{i:<7} | '
+					f'{item['Nome']:<15} | '
 					f'{item['Quantidade']:>10} | '
 					f'{item['Unidade']:<10} | '
 					f'{item['Descrição']:<20}'
@@ -146,8 +146,8 @@ while True:
 			cabecalho_lista()
 			for i, item in enumerate(lista):
 				print(
-					f'{i:<10} | '
-					f'{item['Nome']:<10} | '
+					f'{i:<7} | '
+					f'{item['Nome']:<15} | '
 					f'{item['Quantidade']:>10} | '
 					f'{item['Unidade']:<10} | '
 					f'{item['Descrição']:<20}'
