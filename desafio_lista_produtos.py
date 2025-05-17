@@ -97,6 +97,7 @@ while True:
 		print('\n\033[1;31;40m(!) - Opção inválida, tente novamente\033[0m')
 		continue
 	if opcao == 'd':
+		print(f'\n✅...\033[1;36;42m Arquivo salvo com sucesso\033[0m...💾')
 		print(f'\n\033[1;33;40m=====> Grato por usar a lista de compras simples <<=====\033[0m ')
 		break
 		
@@ -142,7 +143,6 @@ while True:
 			del lista[apaga]
 			salvar_lista(lista)  # Adiciona esta linha
 			print('===' * 20)
-			print('\n\033[1;33;40m===>> Lista alterada <<===\033[0m')
 			cabecalho_lista()
 			for i, item in enumerate(lista):
 				print(
@@ -152,6 +152,8 @@ while True:
 					f'{item['Unidade']:<10} | '
 					f'{item['Descrição']:<20}'
 				)
+			print('\n\033[1;33;40m===>> Lista alterada <<===\033[0m')
+			print('\n\033[1;33;40m===>> ❎ Item removido <<===\033[0m')	
 		except IndexError:
 			print('\n\033[1;31;40m(!) - Item não consta na lista\033[0m')
 			continue
