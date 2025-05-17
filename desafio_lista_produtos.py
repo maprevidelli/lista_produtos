@@ -157,6 +157,9 @@ while True:
 		except IndexError:
 			print('\n\033[1;31;40m(!) - Item não consta na lista\033[0m')
 			continue
+		except ValueError:
+			print('\n\033[1;31;40m(!) - Erro de digitação - verifique\033[0m')
+			continue
 	# Pesquisar produto
 	if opcao == 'c':
 		contagem = len(lista)
