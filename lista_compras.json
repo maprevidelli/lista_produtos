@@ -1,0 +1,98 @@
+[
+    {
+        "Nome": "Açucar",
+        "Quantidade": 280,
+        "Unidade": "Quilos",
+        "Descrição": "Refinado comum - tipo Exp"
+    },
+    {
+        "Nome": "Feijão",
+        "Quantidade": 200,
+        "Unidade": "Quilos",
+        "Descrição": "Preto - tipo Exp"
+    },
+    {
+        "Nome": "Sal",
+        "Quantidade": 50,
+        "Unidade": "Quilos",
+        "Descrição": "Sal leve - tipo Exp"
+    },
+    {
+        "Nome": "Soja",
+        "Quantidade": 200,
+        "Unidade": "Quilos",
+        "Descrição": "Soja bruta - tipo Exp"
+    },
+    {
+        "Nome": "Fubá",
+        "Quantidade": 55,
+        "Unidade": "Quilos",
+        "Descrição": "tipo mimosinho"
+    },
+    {
+        "Nome": "Lentilha",
+        "Quantidade": 20,
+        "Unidade": "Quilos",
+        "Descrição": "comum de Mujadra - verde"
+    },
+    {
+        "Nome": "Café",
+        "Quantidade": 68,
+        "Unidade": "Quilos",
+        "Descrição": "Torrado e Moído - tipo Exp"
+    },
+    {
+        "Nome": "Refrigerante",
+        "Quantidade": 200,
+        "Unidade": "Litros",
+        "Descrição": "Coca-Cola"
+    },
+    {
+        "Nome": "Trigo",
+        "Quantidade": 10,
+        "Unidade": "Quilos",
+        "Descrição": "integral para Kibe"
+    },
+    {
+        "Nome": "Refrigerante",
+        "Quantidade": 30,
+        "Unidade": "Litros",
+        "Descrição": "Guaraná - Antartica"
+    },
+    {
+        "Nome": "Achocolatado",
+        "Quantidade": 15,
+        "Unidade": "Quilos",
+        "Descrição": "Toddy"
+    },
+    {
+        "Nome": "Maça",
+        "Quantidade": 15,
+        "Unidade": "Quilos",
+        "Descrição": "tipo Gala"
+    },
+    {
+        "Nome": "Pera",
+        "Quantidade": 20,
+        "Unidade": "Quilos",
+        "Descrição": "Willians"
+    },
+    {
+        "Nome": "Banana",
+        "Quantidade": 12,
+        "Unidade": "Quilos",
+        "Descrição": "Nanica"
+    },
+    {
+        "Nome": "Banana",
+        "Quantidade": 10,
+        "Unidade": "Quilos",
+        "Descrição": "tipo Maça"
+    },
+    {
+        "Nome": "Sabão",
+        "Quantidade": 50,
+        "Unidade": "Unidades",
+        "Descrição": "tipo KraKra - pra Cú"
+    }
+]

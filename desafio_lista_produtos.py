@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 
 # Define o caminho absoluto para o arquivo de dados
-ARQUIVO_DADOS = Path.home() / 'lista_compras.json'
+ARQUIVO_DADOS = Path.home() / 'Projetos' / 'vscode_projetos' / 'lista_produtos' / 'lista_compras.json'
 
 def carregar_lista():
     try:
