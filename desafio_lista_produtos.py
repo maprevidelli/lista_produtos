@@ -2,7 +2,8 @@
 import json
 import os
 from pathlib import Path
-
+from datetime import datetime
+agora = datetime.now()
 # Define o caminho absoluto para o arquivo de dados
 ARQUIVO_DADOS = Path.home() / 'Projetos' / 'vscode_projetos' / 'lista_produtos' / 'lista_compras.json'
 
@@ -99,6 +100,8 @@ while True:
 	if opcao == 'd':
 		print(f'\n✅...\033[1;36;42m Arquivo salvo com sucesso\033[0m...💾')
 		print(f'\n\033[1;33;40m=====> Grato por usar a lista de compras simples <<=====\033[0m ')
+		print("Data:", agora.strftime("%d/%m/%Y"))
+		print("Hora:", agora.strftime("%H:%M:%S"))
 		break
 		
 	if opcao == 'a':
